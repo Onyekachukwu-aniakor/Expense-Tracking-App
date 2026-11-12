@@ -7,8 +7,8 @@
                     <h1 class="text-3xl font-bold text-white">Dashboard</h1>
                     <p class="text-purple-100 mt-1">Welcome back, {{ auth()->user()->name }}!</p>
                 </div>
-                <div class="flex items-center gap-4">
-                    <button wire:click="previousMonth" class="p-2 bg-white/20 hover:bg-white/30 rounded-lg text-white transition">
+                <div class="flex items-center gap-2">
+                    <button wire:click="previousMonth" class="p-0.5 bg-white/20 hover:bg-white/30 rounded-lg text-white transition">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                         </svg>
@@ -16,7 +16,7 @@
                     <div class="text-white font-semibold">
                         {{ \Carbon\Carbon::create($selectedYear, $selectedMonth, 1)->format('F Y') }}
                     </div>
-                    <button wire:click="nextMonth" class="p-2 bg-white/20 hover:bg-white/30 rounded-lg text-white transition">
+                    <button wire:click="nextMonth" class="p-0.5 bg-white/20 hover:bg-white/30 rounded-lg text-white transition">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                         </svg>
