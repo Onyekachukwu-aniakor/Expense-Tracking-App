@@ -67,7 +67,7 @@ class Expense extends Model
         return $query->whereBetween('date', [$startDate, $endDate]);
     }
 
-    //helper method
+    //helper method.
 
     public function isRecurring(): bool
     {

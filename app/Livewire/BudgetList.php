@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Title;
 use Livewire\Component;
-#[Title(content:"Budgets - ExpenseTracker")]
+#[Title(content:"Budgets ")]
 class BudgetList extends Component
 {
 

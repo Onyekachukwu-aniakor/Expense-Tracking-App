@@ -11,7 +11,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 
 use function Laravel\Prompts\form;
-#[Title(content:"Expenses - ExpenseTracker")]
+#[Title(content:"Expenses")]
 class ExpenseList extends Component
 {
     use WithPagination;
