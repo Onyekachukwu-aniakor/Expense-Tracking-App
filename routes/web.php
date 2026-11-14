@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'welcome')->name('home');
 
 Route::middleware(['auth', 'verified'])->group(function () {
-    //Route::view('dashboard', 'dashboard')->name('dashboard');
+    //Route::view('dashboard', 'dashboard')->name('dashboard')
     Route::get('dashboard', Dashboard::class)->name('dashboard');
     Route::get(uri:'categories', action: Categories::class)->name(name:'categories.index');
     //budgets

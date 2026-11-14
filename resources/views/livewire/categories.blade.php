@@ -1,6 +1,6 @@
 <div class="min-h-screen bg-gray-50 dark:bg-neutral-900">
     <!-- Header -->
-    <div class="bg-linear-to-r from-green-600 to-emerald-600 shadow-lg ">
+    <div class="bg-linear-to-r from-green-600  to-emerald-600 shadow-lg rounded-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div>
                 <h1 class="text-3xl font-bold text-white">Categories</h1>
@@ -32,7 +32,7 @@
             </div>
         @endif
     </div>
-    <div class="grid grid-col-1 lg:grid-col-2 gap-4">
+    <div class="grid grid-col-1 lg:grid-col-2 gap-4 ">
         {{-- create/edit categories form --}}
         <div class="lg:col-span-1">
             <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-2 sticky top-8">
@@ -60,11 +60,11 @@
                             <label class="block text-sm font-medium text-gray-400 mb-2">
                                 Color <span class="text-red-500">*</span>
                             </label>
-                            <div class="grid grid-cols-6 gap-2">
+                            <div class="grid grid-cols-6 gap-1.5">
                                 @foreach($colors as $colorOption)
                                     <button type="button"
                                             wire:click="$set('color', '{{ $colorOption }}')"
-                                            class="w-10 h-10 rounded-lg transition transform hover:scale-110 {{ $color === $colorOption ? 'ring-4 ring-offset-2 ring-gray-400' : '' }}"
+                                            class="w-10 h-10 rounded-lg transition transform hover:scale-110 {{ $color === $colorOption ? 'ring-1 ring-offset-2 ring-gray-400' : '' }}"
                                             style="background-color: {{ $colorOption }};">
                                     </button>
                                 @endforeach

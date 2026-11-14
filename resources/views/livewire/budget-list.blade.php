@@ -1,23 +1,23 @@
 <div class="min-h-screen bg-gray-50 dark:bg-neutral-900 rounded-lg">
     {{-- header --}}
-    <div class="bg-linear-to-r from-indigo-600 to-purple-600 shadow-lg">
+    <div class="bg-linear-to-r from-indigo-600 to-purple-600 shadow-lg rounded-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div class="flex items-center justify-between">
                 <div class="">
                     <h1 class="text-3xl font-bold text-white">Budgets</h1>
                     <p class="mt-1 font-semibold text-white">Plan and track your spending limits</p>
                 </div>
-                <div class="flex items-center gap-4">
-                    <button class="p-2 dark:bg-white/20 dark:hover:bg-white/30 rounded-lg text-white transition border bg-purple-700 border-black" wire:click='previousMonth'>
+                <div class="flex items-center gap-2">
+                    <button class="p-0.5 dark:bg-white/20 dark:hover:bg-white/30 rounded-lg text-white transition border bg-purple-700 border-black" wire:click='previousMonth'>
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                         </svg>
                     </button>
-                    <button wire:click='setCurrentMonth' class="px-4 py-2 dark:bg-white/20 dark:hover:bg-white/30 rounded-lg text-white font-semibold transition   border-black">
+                    <button wire:click='setCurrentMonth' class=" py-2 dark:bg-white/20 dark:hover:bg-white/30 rounded-lg text-white font-semibold transition   border-black">
                         
                         {{ \Illuminate\Support\Carbon::create($selectedYear, $selectedMonth, 1)->format('F Y') }}
                     </button>
-                    <button wire:click='nextMonth' class="p-2 dark:bg-white/20 dark:hover:bg-white/30 rounded-lg text-white transition border bg-purple-700 border-black">
+                    <button wire:click='nextMonth' class="p-0.5 dark:bg-white/20 dark:hover:bg-white/30 rounded-lg text-white transition border bg-purple-700 border-black">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg>

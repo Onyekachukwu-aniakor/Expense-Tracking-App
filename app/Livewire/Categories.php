@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Computed;
 use Livewire\Attributes\Title;
 use Livewire\Component;
-#[Title(content:"Categories - ExpenseTracker")]
+#[Title(content:"Categories ")]
 class Categories extends Component
 {
 
@@ -40,7 +40,7 @@ class Categories extends Component
 
     protected function rules(): array{
         return [
-        'name' => 'required|string|max:255|unique:categories,name,' . ($this->editingId ?: 'NULL') . ',id,user_id,' . auth()->id(),
+        'name' => 'required|string|max:255|unique:categories,name,' . ($this->editingId ?: 'NULL') . ',id,user_id,' . Auth::user()->id,
         'color' => 'required|string',
         'icon'=>'nullable|max:255|string',
         ];
@@ -96,7 +96,7 @@ class Categories extends Component
                 'color' => $this->color,
                 'icon' => $this->icon,
             ]);
-            session()->flash('message','Category created successfully.');
+            session()->flash(key:'message',value:'Category created successfully.');
         }
         $this->reset(['name','color','icon','editingId','isEditing']);
     }

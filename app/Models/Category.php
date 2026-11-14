@@ -30,7 +30,7 @@ class Category extends Model
         return $this->expenses()
         ->whereMonth(column:'date', operator:$month)
         ->whereYear(column:'date', operator:$year)
-        ->sum(column: 'amoun');
+        ->sum(column: 'amount');
 
     }
 
